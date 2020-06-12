@@ -1,0 +1,9 @@
+version : '3'
+services:
+        web-crawling:
+                image : netsarang/web-crawling
+                
+                volumes : 
+                        - ./info/:/root/info/
+                command:
+                        /bin/bash -c "python3 /root/info/main.py ; sleep infinity"
